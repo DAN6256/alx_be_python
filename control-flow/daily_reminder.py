@@ -7,8 +7,6 @@ reminder = f"'{task}' is a {priority} task"
 match priority:
     case "high":
         if time_bound == "yes":
-            reminder = f"Reminder: '{task}' is a high priority task that requires immediate attention today!"
-            print(reminder)
+            print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
     case "low":
-        reminder = f"Note: '{task}' is a low priority task.Consider completing it when you have free time!"
-        print(reminder)
+        print(f"Note: '{task}' is a low priority task.Consider completing it when you have free time!")
