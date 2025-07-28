@@ -3,6 +3,8 @@ class Book:
         self.title = title
         self.author = author
         self._is_checked_out = _is_checked_out
+    def return_book(self):
+        self._is_checked_out = False
 class Library:
     def __init__(self):
         self._books = []
@@ -13,7 +15,7 @@ class Library:
     def check_out_book(self, title):
         for book in self._books:
             if book.title == title and not book._is_checked_out:
-                book._is_checked_out = True
+                book.return_book()
                 return True
         return False
 
